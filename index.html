@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Peluquería Parque Europa | Peluquería y barbería en Fuenlabrada</title>
+<meta name="description" content="Peluquería Parque Europa: peluquería y barbería de caballero en C. de Francia, Fuenlabrada. 5,0★ en Google. Pide tu cita por WhatsApp.">
+<meta name="theme-color" content="#111111">
+<meta property="og:title" content="Peluquería Parque Europa · Fuenlabrada">
+<meta property="og:description" content="Peluquería Parque Europa: peluquería y barbería de caballero en C. de Francia, Fuenlabrada. 5,0★ en Google. Pide tu cita por WhatsApp.">
+<meta property="og:image" content="https://images.unsplash.com/photo-1585747860715-2ba37e788b70?auto=format&fit=crop&w=1200&q=80">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@500;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --dark:#111111; --accent:#d9a62e; --light:#f6f3ec; --soft:#f3e3b8;
+    --ink:#1d1d1f; --muted:#6b6b72; --line:rgba(0,0,0,.09);
+    --title:'Unbounded', serif;
+  }
+  *{box-sizing:border-box;margin:0;padding:0;}
+  html{scroll-behavior:smooth;scroll-padding-top:80px;}
+  body{font-family:'Inter',system-ui,sans-serif;background:#fff;color:var(--ink);line-height:1.65;-webkit-font-smoothing:antialiased;overflow-x:hidden;}
+  a{color:inherit;text-decoration:none;}
+  img{max-width:100%;display:block;}
+  h1,h2,h3{font-family:var(--title);font-weight:700;line-height:1.12;}
+  .wrap{max-width:1160px;margin:0 auto;padding:0 24px;}
+
+  /* 1. HEADER */
+  header{position:fixed;inset:0 0 auto 0;z-index:50;transition:background .35s,box-shadow .35s;}
+  header.scrolled{background:rgba(255,255,255,.94);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);box-shadow:0 2px 20px rgba(0,0,0,.07);}
+  nav{display:flex;align-items:center;justify-content:space-between;gap:20px;padding:18px 24px;max-width:1160px;margin:0 auto;}
+  .logo{font-family:var(--title);font-size:1.45rem;color:#fff;transition:color .35s;letter-spacing:.02em;}
+  .logo span{color:var(--accent);}
+  header.scrolled .logo{color:var(--dark);}
+  nav ul{list-style:none;display:flex;gap:30px;}
+  nav ul a{font-size:.9rem;font-weight:500;color:rgba(255,255,255,.9);transition:color .25s;}
+  header.scrolled nav ul a{color:var(--ink);}
+  nav ul a:hover{color:var(--accent);}
+  .nav-cta{background:var(--accent);color:#111111;padding:11px 22px;border-radius:40px;font-weight:600;font-size:.85rem;white-space:nowrap;transition:transform .2s,box-shadow .2s;}
+  .nav-cta:hover{transform:translateY(-2px);box-shadow:0 10px 24px -10px var(--accent);}
+
+  /* 2. HERO */
+  .hero{position:relative;min-height:100vh;min-height:100svh;display:flex;align-items:center;color:#fff;overflow:hidden;}
+  .hero-bg{position:absolute;inset:0;background:url('https://images.unsplash.com/photo-1585747860715-2ba37e788b70?q=80&w=2000&auto=format&fit=crop') center/cover;transform:scale(1.07);animation:zoom 16s ease-out forwards;}
+  @keyframes zoom{to{transform:scale(1);}}
+  .hero::after{content:'';position:absolute;inset:0;background:linear-gradient(105deg,rgba(10,10,10,.92) 25%,rgba(10,10,10,.55) 70%,rgba(217,166,46,.25) 100%);}
+  .hero-content{position:relative;z-index:2;max-width:1160px;margin:0 auto;padding:130px 24px 90px;width:100%;}
+  .tag{display:inline-flex;align-items:center;gap:8px;background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.25);backdrop-filter:blur(6px);padding:8px 16px;border-radius:40px;font-size:.8rem;font-weight:500;margin-bottom:24px;}
+  .tag b{color:var(--accent);}
+  .hero h1{font-size:clamp(2.6rem,6.6vw,5rem);max-width:780px;margin-bottom:22px;}
+  .hero h1 em{font-style:normal;color:var(--accent);}
+  .hero p{max-width:540px;font-size:1.08rem;color:rgba(255,255,255,.86);margin-bottom:34px;}
+  .actions{display:flex;flex-wrap:wrap;gap:14px;}
+  .btn{display:inline-flex;align-items:center;gap:10px;padding:15px 30px;border-radius:40px;font-weight:600;font-size:.92rem;transition:transform .2s,box-shadow .2s,background .2s,color .2s;}
+  .btn svg{width:20px;height:20px;}
+  .btn-wa{background:#25D366;color:#063a1c;}
+  .btn-wa:hover{transform:translateY(-2px);box-shadow:0 14px 30px -12px rgba(37,211,102,.7);}
+  .btn-ghost{border:1.5px solid rgba(255,255,255,.55);color:#fff;}
+  .btn-ghost:hover{background:#fff;color:var(--dark);}
+  .btn-accent{background:var(--accent);color:#111111;}
+  .btn-accent:hover{transform:translateY(-2px);}
+
+  /* 3. STATS */
+  .stats{background:var(--dark);color:#fff;}
+  .stats .wrap{display:grid;grid-template-columns:repeat(4,1fr);gap:20px;padding:34px 24px;text-align:center;}
+  .stats b{display:block;font-family:var(--title);font-size:clamp(1.5rem,3vw,2.1rem);color:var(--accent);font-weight:700;}
+  .stats span{font-size:.78rem;letter-spacing:.08em;text-transform:uppercase;color:rgba(255,255,255,.75);}
+
+  section{padding:100px 0;}
+  .eyebrow{display:inline-block;color:var(--accent-dark,var(--accent));font-size:.78rem;font-weight:700;letter-spacing:.16em;text-transform:uppercase;margin-bottom:12px;}
+  .s-title{font-size:clamp(2rem,4.4vw,3rem);color:var(--dark);margin-bottom:14px;}
+  .s-title em{font-style:normal;color:var(--accent);}
+  .s-desc{max-width:620px;color:var(--muted);font-size:1.02rem;margin-bottom:52px;}
+  .center{text-align:center;} .center .s-desc{margin-left:auto;margin-right:auto;}
+
+  /* 4. SERVICIOS */
+  .services{background:var(--light);}
+  .grid-s{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;}
+  .card{background:#fff;border:1px solid var(--line);border-radius:20px;padding:32px 28px;transition:transform .3s,box-shadow .3s,border-color .3s;position:relative;overflow:hidden;}
+  .card::before{content:'';position:absolute;inset:0 0 auto 0;height:3px;background:var(--accent);transform:scaleX(0);transform-origin:left;transition:transform .4s;}
+  .card:hover{transform:translateY(-6px);box-shadow:0 24px 50px -28px rgba(0,0,0,.35);}
+  .card:hover::before{transform:scaleX(1);}
+  .ic{width:54px;height:54px;border-radius:16px;background:var(--soft);color:var(--dark);display:grid;place-items:center;font-size:1.5rem;margin-bottom:20px;}
+  .card h3{font-size:1.3rem;color:var(--dark);margin-bottom:8px;}
+  .card p{color:var(--muted);font-size:.94rem;}
+  .card.more{background:var(--dark);color:#fff;border-color:var(--dark);display:flex;flex-direction:column;justify-content:center;}
+  .card.more h3{color:#fff;} .card.more p{color:rgba(255,255,255,.75);margin-bottom:18px;}
+  .card.more .ic{background:rgba(255,255,255,.1);color:var(--accent);}
+
+  /* 5. GALERÍA */
+  .gallery-grid{display:grid;grid-template-columns:1.3fr 1fr;grid-template-rows:260px 260px;gap:18px;}
+  .gallery-grid figure{border-radius:20px;overflow:hidden;position:relative;}
+  .gallery-grid figure:first-child{grid-row:span 2;}
+  .gallery-grid img{width:100%;height:100%;object-fit:cover;transition:transform .6s;}
+  .gallery-grid figure:hover img{transform:scale(1.06);}
+
+  /* 6. POR QUÉ */
+  .why{background:var(--dark);color:#fff;}
+  .why .s-title{color:#fff;} .why .s-desc{color:rgba(255,255,255,.7);}
+  .why .eyebrow{color:var(--accent);}
+  .grid-w{display:grid;grid-template-columns:repeat(4,1fr);gap:22px;}
+  .w{padding:28px 24px;border-radius:18px;background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.1);}
+  .w .n{font-family:var(--title);font-size:2rem;color:var(--accent);margin-bottom:10px;display:block;}
+  .w h3{font-size:1.15rem;margin-bottom:8px;}
+  .w p{font-size:.9rem;color:rgba(255,255,255,.72);}
+
+  /* 7. CÓMO RESERVAR */
+  .grid-steps{display:grid;grid-template-columns:repeat(4,1fr);gap:22px;counter-reset:s;}
+  .step{position:relative;padding:30px 24px;border-radius:18px;background:var(--light);}
+  .step::before{counter-increment:s;content:'0' counter(s);font-family:var(--title);font-size:2.4rem;color:var(--accent);display:block;margin-bottom:8px;line-height:1;}
+  .step h3{font-size:1.1rem;color:var(--dark);margin-bottom:6px;}
+  .step p{font-size:.9rem;color:var(--muted);}
+
+  /* 8. OPINIONES */
+  .reviews{background:var(--light);}
+  .rev-note{display:inline-block;font-size:.78rem;color:var(--muted);font-style:italic;background:#fff;border:1px dashed var(--line);padding:6px 14px;border-radius:30px;margin:-30px 0 40px;}
+  .grid-r{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;}
+  .r{background:#fff;border-radius:20px;padding:30px;border:1px solid var(--line);display:flex;flex-direction:column;}
+  .stars{color:#f5a623;letter-spacing:3px;margin-bottom:14px;}
+  .r p{font-size:.97rem;color:#3a3a40;font-style:italic;flex:1;margin-bottom:20px;}
+  .r .who{display:flex;align-items:center;gap:12px;font-weight:600;font-size:.9rem;color:var(--dark);}
+  .av{width:40px;height:40px;border-radius:50%;background:var(--accent);color:#111111;display:grid;place-items:center;font-weight:700;}
+
+  /* 9. CONTACTO */
+  .grid-c{display:grid;grid-template-columns:1fr 1.15fr;gap:30px;align-items:stretch;}
+  .c-card{background:var(--light);border-radius:22px;padding:36px;}
+  .c-row{display:flex;gap:16px;padding:16px 0;border-bottom:1px solid var(--line);}
+  .c-row:last-of-type{border-bottom:0;}
+  .c-ic{width:44px;height:44px;flex-shrink:0;border-radius:50%;background:#fff;display:grid;place-items:center;font-size:1.15rem;}
+  .c-row b{display:block;font-size:.74rem;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);margin-bottom:2px;}
+  .c-row span,.c-row a{font-size:1rem;color:var(--ink);}
+  .hours{font-size:.95rem;line-height:1.7;}
+  .c-card .actions{margin-top:24px;}
+  .map{border-radius:22px;overflow:hidden;min-height:420px;box-shadow:0 20px 50px -30px rgba(0,0,0,.4);}
+  .map iframe{width:100%;height:100%;min-height:420px;border:0;display:block;}
+
+  /* 10. FOOTER */
+  footer{background:var(--dark);color:rgba(255,255,255,.7);padding:40px 0;text-align:center;font-size:.84rem;}
+  footer strong{color:#fff;}
+  footer .logo{display:inline-block;color:#fff;margin-bottom:10px;}
+
+  /* 11. WHATSAPP FLOTANTE */
+  .wa-float{position:fixed;right:22px;bottom:22px;z-index:60;width:60px;height:60px;border-radius:50%;background:#25D366;display:grid;place-items:center;box-shadow:0 12px 30px -8px rgba(37,211,102,.6);transition:transform .25s;}
+  .wa-float:hover{transform:scale(1.08);}
+  .wa-float svg{width:31px;height:31px;fill:#fff;}
+  .wa-float::after{content:'';position:absolute;inset:0;border-radius:50%;border:2px solid #25D366;animation:pulse 2.4s infinite;}
+  @keyframes pulse{0%{transform:scale(1);opacity:.8}100%{transform:scale(1.6);opacity:0}}
+
+  .reveal{opacity:0;transform:translateY(28px);transition:opacity .8s ease,transform .8s ease;}
+  .reveal.on{opacity:1;transform:none;}
+  @media(prefers-reduced-motion:reduce){.reveal{opacity:1;transform:none}.hero-bg{animation:none;transform:none}}
+
+  @media(max-width:900px){
+    nav ul{display:none;}
+    .stats .wrap{grid-template-columns:repeat(2,1fr);}
+    .grid-s,.grid-r{grid-template-columns:1fr;}
+    .grid-w,.grid-steps{grid-template-columns:repeat(2,1fr);}
+    .grid-c{grid-template-columns:1fr;}
+    .gallery-grid{grid-template-columns:1fr 1fr;grid-template-rows:240px 180px;}
+    .gallery-grid figure:first-child{grid-column:span 2;grid-row:auto;}
+    section{padding:76px 0;}
+  }
+  @media(max-width:560px){
+    .grid-w,.grid-steps{grid-template-columns:1fr;}
+    .logo{font-size:1.2rem;}
+    .nav-cta{padding:9px 16px;font-size:.8rem;}
+    .hero-content{padding-top:110px;}
+    .btn{width:100%;justify-content:center;}
+    .c-card{padding:26px;}
+  }
+</style>
+</head>
+<body>
+
+<header id="header">
+  <nav>
+    <a href="#inicio" class="logo">Parque <span>Europa</span></a>
+    <ul>
+      <li><a href="#servicios">Servicios</a></li>
+      <li><a href="#espacio">Nuestro espacio</a></li>
+      <li><a href="#opiniones">Opiniones</a></li>
+      <li><a href="#contacto">Contacto</a></li>
+    </ul>
+    <a class="nav-cta" href="https://wa.me/34697900275?text=Hola!%20He%20visto%20vuestra%20web%20y%20me%20gustar%C3%ADa%20pedir%20cita%20en%20Peluquer%C3%ADa%20Parque%20Europa" target="_blank" rel="noopener">Reservar cita</a>
+  </nav>
+</header>
+
+<section class="hero" id="inicio" style="padding:0">
+  <div class="hero-bg" role="img" aria-label="Interior de una barbería"></div>
+  <div class="hero-content">
+    <span class="tag">★ <b>5,0</b> en Google · Peluquería y Barbería · Fuenlabrada</span>
+    <h1>Tu corte, <em>a otro nivel</em></h1>
+    <p>Peluquería y barbería de caballero en Parque Europa. Trato cercano, mano experta y el corte que buscas, aunque tu pelo sea de los difíciles.</p>
+    <div class="actions">
+      <a class="btn btn-wa" href="https://wa.me/34697900275?text=Hola!%20He%20visto%20vuestra%20web%20y%20me%20gustar%C3%ADa%20pedir%20cita%20en%20Peluquer%C3%ADa%20Parque%20Europa" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.5 14.4c-.3-.1-1.8-.9-2-1s-.5-.1-.7.1-.8 1-.9 1.2-.3.2-.6.1a8.2 8.2 0 0 1-2.4-1.5 9 9 0 0 1-1.7-2.1c-.2-.3 0-.5.1-.6l.4-.5.3-.5v-.5l-.9-2.2c-.2-.6-.5-.5-.7-.5h-.6a1.1 1.1 0 0 0-.8.4 3.4 3.4 0 0 0-1 2.5 5.9 5.9 0 0 0 1.2 3.1 13.5 13.5 0 0 0 5.2 4.6c2.6 1 2.6.7 3.1.6a2.6 2.6 0 0 0 1.7-1.2 2.1 2.1 0 0 0 .2-1.2c-.1-.1-.3-.2-.6-.3ZM12 21.8a9.8 9.8 0 0 1-5-1.4l-.4-.2-3.7 1 1-3.6-.2-.4A9.8 9.8 0 1 1 12 21.8Zm8.4-18.3A11.8 11.8 0 0 0 1.8 17.7L.2 23.8l6.3-1.6a11.8 11.8 0 0 0 5.6 1.4A11.8 11.8 0 0 0 20.4 3.5Z"/></svg> Pedir cita por WhatsApp</a>
+      <a class="btn btn-ghost" href="#servicios">Ver servicios</a>
+    </div>
+  </div>
+</section>
+
+<div class="stats">
+  <div class="wrap">
+    <div><b>5,0★</b><span>Valoración Google</span></div>
+    <div><b>27</b><span>Reseñas reales</span></div>
+    <div><b>100%</b><span>Reseñas de 5 estrellas</span></div>
+    <div><b>L–S</b><span>Abierto de lunes a sábado</span></div>
+  </div>
+</div>
+
+<section class="services" id="servicios">
+  <div class="wrap">
+    <div class="center reveal">
+      <span class="eyebrow">Qué hacemos</span>
+      <h2 class="s-title">Lo que <em>hacemos</em></h2>
+      <p class="s-desc">Peluquería y barbería para caballero, con el tiempo y el detalle que cada corte necesita.</p>
+    </div>
+    <div class="grid-s">
+      <div class="card"><div class="ic">✂️</div><h3>Corte de caballero</h3><p>Corte a tu medida según tu tipo de pelo y tu estilo, también para pelo fino o complicado.</p></div>
+      <div class="card"><div class="ic">💈</div><h3>Barbería</h3><p>Servicio de barbería con el sello de la casa. Cuéntanos qué buscas y lo hacemos realidad.</p></div>
+      <div class="card more"><div class="ic">💬</div><h3>¿Buscas algo concreto?</h3><p>Escríbenos por WhatsApp y te contamos todos los servicios y precios.</p><a class="btn btn-accent" href="https://wa.me/34697900275?text=Hola!%20He%20visto%20vuestra%20web%20y%20me%20gustar%C3%ADa%20pedir%20cita%20en%20Peluquer%C3%ADa%20Parque%20Europa" target="_blank" rel="noopener">Preguntar por WhatsApp</a></div>
+    </div>
+  </div>
+</section>
+
+<section id="espacio">
+  <div class="wrap">
+    <div class="reveal">
+      <span class="eyebrow">Nuestro espacio</span>
+      <h2 class="s-title">Ambiente de <em>barbería</em></h2>
+      <p class="s-desc">Un sitio cómodo y cercano donde sentarte, charlar tranquilamente y salir con el corte perfecto.</p>
+    </div>
+    <div class="gallery-grid reveal">
+      <figure><img src="https://images.unsplash.com/photo-1593702275687-f8b402bf1fb5?q=80&w=1100&auto=format&fit=crop" alt="Corte de pelo de caballero con máquina" loading="lazy"></figure>
+      <figure><img src="https://images.unsplash.com/photo-1622287162716-f311baa1a2b8?q=80&w=800&auto=format&fit=crop" alt="Barbero trabajando" loading="lazy"></figure>
+      <figure><img src="https://images.unsplash.com/photo-1621605815971-fbc98d665033?q=80&w=800&auto=format&fit=crop" alt="Herramientas de barbería" loading="lazy"></figure>
+    </div>
+  </div>
+</section>
+
+<section class="why">
+  <div class="wrap">
+    <div class="reveal">
+      <span class="eyebrow">Por qué elegirnos</span>
+      <h2 class="s-title">Por qué repiten <em>nuestros clientes</em></h2>
+    </div>
+    <div class="grid-w">
+      <div class="w"><span class="n">01</span><h3>Trato de 10</h3><p>Te sientes cómodo desde que entras, con una charla tranquila y buen ambiente.</p></div>
+      <div class="w"><span class="n">02</span><h3>Acabado perfecto</h3><p>Cada corte se trabaja con detalle para que salgas como querías.</p></div>
+      <div class="w"><span class="n">03</span><h3>Peluquero de confianza</h3><p>Muchos clientes vienen la primera vez y ya no cambian.</p></div>
+      <div class="w"><span class="n">04</span><h3>Buena disponibilidad</h3><p>Horario amplio de lunes a sábado para que encuentres tu hueco.</p></div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="center reveal">
+      <span class="eyebrow">Cómo reservar</span>
+      <h2 class="s-title">Tu cita en <em>4 pasos</em></h2>
+      <p class="s-desc">Sin apps ni registros: nos escribes y te buscamos hueco.</p>
+    </div>
+    <div class="grid-steps">
+      <div class="step"><h3>Escríbenos</h3><p>Mándanos un WhatsApp al 697 90 02 75.</p></div>
+      <div class="step"><h3>Elige día y hora</h3><p>Te damos las opciones disponibles.</p></div>
+      <div class="step"><h3>Cuéntanos tu estilo</h3><p>Nos dices qué corte buscas.</p></div>
+      <div class="step"><h3>Sal renovado</h3><p>Y con ganas de volver.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="reviews" id="opiniones">
+  <div class="wrap">
+    <div class="center reveal">
+      <span class="eyebrow">Opiniones</span>
+      <h2 class="s-title">Lo que dicen <em>nuestros clientes</em></h2>
+      <p class="s-desc">5,0 estrellas de media con 27 reseñas en Google.</p>
+      <span class="rev-note">Reseñas de ejemplo · pendiente de reales</span>
+    </div>
+    <div class="grid-r">
+      <div class="r"><div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div><p>"Súper atento y con un acabado perfecto desde la primera vez. Se ha convertido en mi peluquero de confianza."</p><div class="who"><span class="av">A</span>Alfred K.</div></div>
+      <div class="r"><div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div><p>"Trato magnífico. Tengo el pelo fino y pelirrojo, que no siempre queda bien, y aquí salgo muy contento."</p><div class="who"><span class="av">A</span>Adrián A.</div></div>
+      <div class="r"><div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div><p>"Servicio rápido y eficaz, muy buena disponibilidad horaria y un ambiente muy cercano."</p><div class="who"><span class="av">L</span>Layt B.</div></div>
+    </div>
+  </div>
+</section>
+
+<section id="contacto">
+  <div class="wrap">
+    <div class="reveal">
+      <span class="eyebrow">Contacto</span>
+      <h2 class="s-title">Te esperamos en <em>Fuenlabrada</em></h2>
+    </div>
+    <div class="grid-c">
+      <div class="c-card reveal">
+        <div class="c-row"><div class="c-ic">📍</div><div><b>Dirección</b><span>C. de Francia, 40, 28943 Fuenlabrada, Madrid</span></div></div>
+        <div class="c-row"><div class="c-ic">📞</div><div><b>Teléfono / WhatsApp</b><a href="tel:+34697900275">697 90 02 75</a></div></div>
+        <div class="c-row"><div class="c-ic">⭐</div><div><b>Valoración</b><span>5,0 sobre 5 · 27 reseñas en Google</span></div></div>
+        <div class="c-row"><div class="c-ic">🕐</div><div><b>Horario</b><div class="hours">Lunes a jueves: 10:00–14:00 y 16:30–21:00<br>Viernes: 10:00–21:00<br>Sábado: 9:30–18:30</div></div></div>
+        <div class="actions">
+          <a class="btn btn-wa" href="https://wa.me/34697900275?text=Hola!%20He%20visto%20vuestra%20web%20y%20me%20gustar%C3%ADa%20pedir%20cita%20en%20Peluquer%C3%ADa%20Parque%20Europa" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.5 14.4c-.3-.1-1.8-.9-2-1s-.5-.1-.7.1-.8 1-.9 1.2-.3.2-.6.1a8.2 8.2 0 0 1-2.4-1.5 9 9 0 0 1-1.7-2.1c-.2-.3 0-.5.1-.6l.4-.5.3-.5v-.5l-.9-2.2c-.2-.6-.5-.5-.7-.5h-.6a1.1 1.1 0 0 0-.8.4 3.4 3.4 0 0 0-1 2.5 5.9 5.9 0 0 0 1.2 3.1 13.5 13.5 0 0 0 5.2 4.6c2.6 1 2.6.7 3.1.6a2.6 2.6 0 0 0 1.7-1.2 2.1 2.1 0 0 0 .2-1.2c-.1-.1-.3-.2-.6-.3ZM12 21.8a9.8 9.8 0 0 1-5-1.4l-.4-.2-3.7 1 1-3.6-.2-.4A9.8 9.8 0 1 1 12 21.8Zm8.4-18.3A11.8 11.8 0 0 0 1.8 17.7L.2 23.8l6.3-1.6a11.8 11.8 0 0 0 5.6 1.4A11.8 11.8 0 0 0 20.4 3.5Z"/></svg> WhatsApp</a>
+          <a class="btn btn-accent" href="tel:+34697900275">Llamar</a>
+        </div>
+      </div>
+      <div class="map reveal">
+        <iframe title="Mapa de Peluquería Parque Europa" src="https://maps.google.com/maps?q=Peluquer%C3%ADa%20Parque%20Europa%2C%20C.%20de%20Francia%2040%2C%20Fuenlabrada&z=16&output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen></iframe>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="logo">Parque <span>Europa</span></div>
+    <p>Propuesta de diseño para <strong>Peluquería Parque Europa</strong> - demo, no es el sitio web oficial del negocio.</p>
+  </div>
+</footer>
+
+<a class="wa-float" href="https://wa.me/34697900275?text=Hola!%20He%20visto%20vuestra%20web%20y%20me%20gustar%C3%ADa%20pedir%20cita%20en%20Peluquer%C3%ADa%20Parque%20Europa" target="_blank" rel="noopener" aria-label="Escribir por WhatsApp"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.5 14.4c-.3-.1-1.8-.9-2-1s-.5-.1-.7.1-.8 1-.9 1.2-.3.2-.6.1a8.2 8.2 0 0 1-2.4-1.5 9 9 0 0 1-1.7-2.1c-.2-.3 0-.5.1-.6l.4-.5.3-.5v-.5l-.9-2.2c-.2-.6-.5-.5-.7-.5h-.6a1.1 1.1 0 0 0-.8.4 3.4 3.4 0 0 0-1 2.5 5.9 5.9 0 0 0 1.2 3.1 13.5 13.5 0 0 0 5.2 4.6c2.6 1 2.6.7 3.1.6a2.6 2.6 0 0 0 1.7-1.2 2.1 2.1 0 0 0 .2-1.2c-.1-.1-.3-.2-.6-.3ZM12 21.8a9.8 9.8 0 0 1-5-1.4l-.4-.2-3.7 1 1-3.6-.2-.4A9.8 9.8 0 1 1 12 21.8Zm8.4-18.3A11.8 11.8 0 0 0 1.8 17.7L.2 23.8l6.3-1.6a11.8 11.8 0 0 0 5.6 1.4A11.8 11.8 0 0 0 20.4 3.5Z"/></svg></a>
+
+<script>
+  const h=document.getElementById('header');
+  const onS=()=>h.classList.toggle('scrolled',window.scrollY>40);
+  window.addEventListener('scroll',onS,{passive:true}); onS();
+  const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('on');io.unobserve(e.target);}}),{threshold:.12});
+  document.querySelectorAll('.reveal,.card,.w,.step,.r').forEach(el=>{el.classList.add('reveal');io.observe(el);});
+</script>
+</body>
+</html>
